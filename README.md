@@ -1,3 +1,50 @@
 # HW-todo-api
+Allows user to track the items they would like to accomplish on a website. The app functions as a digital planner.
 
-Submit your To-Do-API here. In your readme describe the application and any additions you made. Please link to the source of the API. If you have a git repo for this project on your own account also link to it here (as it would document the dif's between what you wrote and what was given to you)
+
+
+# Base App
+ 
+ [StackAbuse](https://stackabuse.com/building-a-todo-app-with-flask-in-python/)
+
+# App
+
+***Return Json***
+- [x] List items
+
+**Endpoint:** ``/items``
+
+**Request Method:** ``GET``
+- [x] Add item
+
+**Endpoint:** ``/items/new/<name>``
+
+**DataType:** ``json`` 
+
+**Request method:** ``Post``
+
+- [x] Search Item status
+
+**Endpoint:** ``/items/<name>``
+
+**DataType:** ``str`` 
+
+**Request method:** ``GET``
+- [x] Update item
+
+**Endpoint** ``/items/update/<Name>/<newstatus>``
+
+**DataType:** ``str``
+
+**Request Method:** ``PUT``
+- [x] Delete item
+
+**Endpoint:** ``/items/remove/<name>``
+
+**DataType:** ``str``
+
+**Request Method:**``DELETE``
+
+# Changes
+
+* Split items into classes and added params so a user can query items quicker
