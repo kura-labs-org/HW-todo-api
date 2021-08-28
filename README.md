@@ -1,3 +1,12 @@
 # HW-todo-api
 
-Submit your To-Do-API here. In your readme describe the application and any additions you made. Please link to the source of the API. If you have a git repo for this project on your own account also link to it here (as it would document the dif's between what you wrote and what was given to you)
+# hw-bank-account
+The goal here is to deploy a flask app that connects to a database and use HTTP Methods to make changes and updates to a database.
+
+
+We're using the following:
+Vscode
+Python - flask, json
+Postman - for substituting curl if using Windows.
+
+
