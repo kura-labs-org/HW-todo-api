@@ -2,7 +2,7 @@ import helper
 from flask import Flask, request, Response
 import json
 
-app = Flask(__name__)
+application = app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
