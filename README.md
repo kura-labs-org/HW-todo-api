@@ -10,4 +10,5 @@ Added a Swagger UI interface through the flask restx extension of python flask. 
 
 ### Links
 [Tutorial this was based off of](https://stackabuse.com/building-a-todo-app-with-flask-in-python/)
+
 [Github Repo where my code is stored](https://github.com/zachcyrus/todo-list)
