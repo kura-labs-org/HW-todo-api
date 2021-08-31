@@ -25,7 +25,8 @@ Before running the script, you need a place to store your data. Once again, a da
 Make a file called todo.db and place it in the same directory as your main.py and helper.py
 After creating the database, a popup appears to make changes. Implement the following adjustments below for a basic database:
 
-*[f](https://user-images.githubusercontent.com/65320854/131421777-d1fe7d2a-8b0b-461a-b76d-f5ad7dfa3e3c.PNG)
+![f](https://user-images.githubusercontent.com/65320854/131421867-ea13f4c3-249a-464a-ac5b-7086ffc43ef9.PNG)
+
 
  
 Run the script main.py by either doing:
