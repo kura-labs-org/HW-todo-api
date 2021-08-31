@@ -2,7 +2,7 @@
 
 ## Summary
 
-This is a To-Do API built with python flask, connected to a SQLite database. The API will allow users to perform create, read, update, and delete(CRUD) on an item resource. The item resource consists of the name of the item as well as the status of the item.
+This is a To-Do API built with python flask connected to a SQLite database, built following a REST architecture design. The API will allow users to perform create, read, update, and delete(CRUD) operations on an item resource. The item resource consists of the name of the item as well as the status of the item.
 
 ## Additions 
 
