@@ -24,7 +24,8 @@ You can install packages in the environment once you see () and those packages r
 Before running the script, you need a place to store your data. Once again, a database is needed and must be implemented. This is done by installing and using the program DB Browser SQLite.
 Make a file called todo.db and place it in the same directory as your main.py and helper.py
 After creating the database, a popup appears to make changes. Implement the following adjustments below for a basic database:
-*Refer to the image attached down below![f](https://user-images.githubusercontent.com/65320854/131421777-d1fe7d2a-8b0b-461a-b76d-f5ad7dfa3e3c.PNG)
+
+[f](https://user-images.githubusercontent.com/65320854/131421777-d1fe7d2a-8b0b-461a-b76d-f5ad7dfa3e3c.PNG)
 
  
 Run the script main.py by either doing:
