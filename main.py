@@ -90,3 +90,11 @@ def delete_item():
     response = Response(json.dumps(res_data), mimetype='application/json')
 
     return response
+@app.route('/items/delall', methods=['DELETE'])
+def del_all():
+    # Get items from the helper
+    res_data = helper.del_all_items()
+
+    # Return response
+    response = Response(json.dumps(res_data), mimetype='application/json')
+    return response
