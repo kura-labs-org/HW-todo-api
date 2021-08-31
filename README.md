@@ -77,6 +77,7 @@ Activating environments
 Running python scripts
 
 After making an edit to the url through app route, you will have to include the edited urls in the CURL command as well
+
 You can deploy a website through a VM, but it will reveal your IP regardless when a website is deployed
 
 
