@@ -18,7 +18,7 @@ def add_item():
 
     #Return error if item not added 
     if res_data is None:
-        response Response("{'error': 'Item not added - " + item 
+        response = Response("{'error': 'Item not added - " + item 
 "'}, status=400 ,mimetype='application/json')
 	return response
     # Return response
