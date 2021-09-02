@@ -41,6 +41,24 @@ def get_all_items():
     response = Response(json.dumps(res_data), mimetype="application/json")
     return response
 
+@app.route("/item/all_item")
+def get_all_len():
+    # Get items from the helper
+    res_data = helper.get_all_item()
+
+    # Return response
+    response = Response(json.dumps(res_data), mimetype="application/json")
+    return response
+
+@app.route("/item/all_status")
+def get_all_status():
+    # Get items from the helper
+    res_data = helper.get_all_status()
+
+    # Return response
+    response = Response(json.dumps(res_data), mimetype="application/json")
+    return response
+
 
 @app.route("/item/status", methods=["GET"])
 def get_item():

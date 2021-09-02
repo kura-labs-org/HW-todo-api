@@ -1,4 +1,5 @@
 import sqlite3
+import collections
 
 DB_PATH = "todo.db"  # Update this path accordingly
 NOTSTARTED = "Not Started"
@@ -36,7 +37,30 @@ def get_all_items():
         print("Error: ", e)
         return None
 
+def get_all_item():
+    try:
+        conn = sqlite3.connect(DB_PATH)
+        c = conn.cursor()
+        c.execute("select item from items")
+        rows = c.fetchall()
+        return rows
+    except Exception as e:
+        print("Error: ", e)
+        return None
 
+def get_all_status():
+    try:
+        conn = sqlite3.connect(DB_PATH)
+        c = conn.cursor()
+        c.execute("select status from items")
+        rows = c.fetchall()
+        return rows
+    except Exception as e:
+        print("Error: ", e)
+        return None
+    
+    
+        
 def get_item(item):
     try:
         conn = sqlite3.connect(DB_PATH)
