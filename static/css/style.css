@@ -1,0 +1,77 @@
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+}
+#form-holder{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: aquamarine;
+    border-radius: 20px;
+    height: 70vh;
+    width: 40vw;
+    
+}
+#input{
+    height: 35px;
+    width: 150px;
+    font-family: monospace;
+    border-radius: 10px;
+    border:none;
+    text-align: center;
+}
+#input:hover{
+    
+    border:none;
+}
+#display{
+    width: 30vw;
+    height: 30vh;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+   
+    align-items: center;
+    padding-top:20px
+
+}
+#add{
+    border-radius: 20px;
+    height: 35px;
+    width: 55px;
+    border:none;
+    background-color: gold;
+    font-weight: 600;
+}
+#add:hover{
+    filter: brightness(2);
+    font-weight: 900;
+}
+.items{
+    display: flex;
+    align-items: baseline;
+    width: 60%;
+    border-bottom: 1px solid black;
+    justify-content:space-around;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+
+}
+#reset{
+    border-radius: 20px;
+    height: 35px;
+    width: 55px;
+    border:none;
+    background-color: red;
+    font-weight: 600;
+}
+#reset:hover{
+    filter: brightness(2);
+    font-weight: 900;
+}
