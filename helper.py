@@ -1,0 +1,103 @@
+import sqlite3
+
+DB_PATH = "todo.db"  # Update this path accordingly
+NOTSTARTED = "Not Started"
+INPROGRESS = "In Progress"
+COMPLETED = "Completed"
+
+
+def add_to_list(item):
+    try:
+        conn = sqlite3.connect(DB_PATH)
+
+        # Once a connection has been established, we use the cursor
+        # object to execute queries
+        c = conn.cursor()
+
+        # Keep the initial status as Not Started
+        c.execute("insert into items(item, status) values(?,?)", (item, NOTSTARTED))
+
+        # We commit to save the change
+        conn.commit()
+        return {"item": item, "status": NOTSTARTED}
+    except Exception as e:
+        print("Error: ", e)
+        return None
+
+
+def get_all_items():
+    try:
+        conn = sqlite3.connect(DB_PATH)
+        c = conn.cursor()
+        c.execute("select * from items")
+        rows = c.fetchall()
+        return {"count": len(rows), "items": rows}
+    except Exception as e:
+        print("Error: ", e)
+        return None
+
+
+def get_item(item):
+    try:
+        conn = sqlite3.connect(DB_PATH)
+        c = conn.cursor()
+        c.execute("select status from items where item='%s'" % item)
+        status = c.fetchone()[0]
+        return status
+    except Exception as e:
+        print("Error: ", e)
+        return None
+
+
+def update_status(item, status):
+    # Check if the passed status is a valid value
+    if status.lower().strip() == "not started":
+        status = NOTSTARTED
+    elif status.lower().strip() == "in progress":
+        status = INPROGRESS
+    elif status.lower().strip() == "completed":
+        status = COMPLETED
+    else:
+        print("Invalid Status: " + status)
+        return None
+
+    try:
+        conn = sqlite3.connect(DB_PATH)
+        c = conn.cursor()
+        c.execute("update items set status=? where item=?", (status, item))
+        conn.commit()
+        return {item: status}
+    except Exception as e:
+        print("Error: ", e)
+        return None
+
+
+def delete_item(item):
+    try:
+        conn = sqlite3.connect(DB_PATH)
+        c = conn.cursor()
+        c.execute("delete from items where item=?", (item,))
+        conn.commit()
+        return {"item": item}
+    except Exception as e:
+        print("Error: ", e)
+        return None
+
+
+# delete rows from a database
+def delete_all_items():
+    try:
+        conn = sqlite3.connect(DB_PATH)
+        c = conn.cursor()  # selects everything in the table. sets equal to C
+        c.execute("select * from items")  # selects eveverything from items table
+        rows = c.fetchall()  # This basically assigns everything to rows.
+
+        c.execute(
+            "delete from items"  # executing a query. the query is delete from table items. There is no where, so it delete everything
+        )
+        conn.commit()  # conn.commit() saves all the changes.
+        return {"count": len(rows), "items": rows}
+
+    except Exception as e:
+        print("Error: ", e)
+        return None
