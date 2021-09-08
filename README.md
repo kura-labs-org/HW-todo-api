@@ -1,7 +1,5 @@
 # HW-todo-api
 
-Submit your To-Do-API here. In your readme describe the application and any additions you made. Please link to the source of the API. If you have a git repo for this project on your own account also link to it here (as it would document the dif's between what you wrote and what was given to you)
-
 For this web application, a todo list is created, then items can be updated, and/or deleted from the list. We will use AWS Beanstalk and Jenkins to deploy the todo app.
 
 For this homework, we were given the resource from [stack abuse](https://stackabuse.com/building-a-todo-app-with-flask-in-python/). I ran into some issues using ***sqlite3*** database that I was not able to troubleshoot.
