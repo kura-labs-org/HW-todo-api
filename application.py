@@ -6,7 +6,7 @@ from flask_migrate import Migrate
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://jepypostgres:Jespson-33181!?@localhost:5432/todo_app"
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://@localhost:5432/todo_app"
 db = SQLAlchemy(app)
 api = Api(app)
 migrate = Migrate(app, db)
@@ -235,3 +235,4 @@ api.add_resource(TodoLists, '/lists')
 
 if __name__ == "__main__":
     app.run(debug=True)
+
