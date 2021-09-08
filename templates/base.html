@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    </head>
+
+<body>
+    <div style="background-color:rgb(231, 236, 243);">
+        
+    <div style="margin-top: 30px;" class="ui container" >
+        <h1 class="ui center aligned header">To Do List App</h1>
+        <p>The objective of this application is to allow the user to create a todo list, and be able to update and delete items from the list.
+            <br>Enter what you want to do below, and click the "add" button to add the item to the list.
+        </p>
+        <form class="ui form" action="/add" method="post">
+            <div class="field">
+                <label>Enter Todo Title</label>
+                <input type="text" name="title" placeholder="Enter..."><br>
+            </div>
+            <button class="ui blue button" type="submit">Add</button>
+        </form>
+
+        <hr>
+
+        {% for todo in todo_list %}
+        <div class="ui segment">
+            <p class="ui big header">{{todo.id }} | {{ todo.title }}</p>
+
+            {% if todo.complete == False %}
+            <span class="ui gray label">Not Complete</span>
+            {% else %}
+            <span class="ui green label">Completed</span>
+            {% endif %}
+
+            <a class="ui blue button" href="/update/{{ todo.id }}">Update</a>
+            <a class="ui red button" href="/delete/{{ todo.id }}">Delete</a>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+
+</html>
