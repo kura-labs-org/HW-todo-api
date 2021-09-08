@@ -1,3 +1,14 @@
 # HW-todo-api
+The goal here is to deploy a flask app that connects to a database and use HTTP Methods to make changes and updates to a database.
 
-Submit your To-Do-API here. In your readme describe the application and any additions you made. Please link to the source of the API. If you have a git repo for this project on your own account also link to it here (as it would document the dif's between what you wrote and what was given to you)
+
+We're using the following:
+Vscode
+Python - flask, json
+Postman - for substituting curl if using Windows.
+
+For EBS deployment
+we needed to change line 5 in the code and the name of the application.py to correspond with name of the file/application that is being deployed. We also needed to add a requirements.txt to make it functional
+
+# HW-todo-api edit
+As of right now. An attempted was made to use a <command> to add the item through a URL input, but currently not working. HTML paging was added as well.
