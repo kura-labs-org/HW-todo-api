@@ -9,3 +9,6 @@ Postman - for substituting curl if using Windows.
 
 For EBS deployment
 we needed to change line 5 in the code and the name of the application.py to correspond with name of the file/application that is being deployed. We also needed to add a requirements.txt to make it functional
+
+# HW-todo-api edit
+As of right now. An attempted was made to use a <command> to add the item through a URL input, but currently not working. HTML paging was added as well.
