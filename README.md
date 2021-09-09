@@ -1,3 +1,13 @@
 # HW-todo-api
 
-Submit your To-Do-API here. In your readme describe the application and any additions you made. Please link to the source of the API. If you have a git repo for this project on your own account also link to it here (as it would document the dif's between what you wrote and what was given to you)
+# Description
+Using Flask to develop a Python based web application that connects to a SQLite Database and communicates with the web server through a seies of HTTP requests. Items can be added, returned, updated and deleted from the ToDoList.
+
+# My addition
+I thought adding a "due date" associated with each ToDo item would be beneficial for staying organized. 
+
+# Credit
+https://stackabuse.com/building-a-todo-app-with-flask-in-python/
+
+# My Repository
+https://github.com/bjones519/ToDoListFlaskApp
