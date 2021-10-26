@@ -60,5 +60,4 @@ def addtodo():
 #             return render_template("index.html",todolist=[item for item in todolist])
 #             con.close()
 
-if __name__ == '__main__':
-    app.run(debug=True)
+    
