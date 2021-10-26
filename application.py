@@ -2,7 +2,7 @@ from flask import Flask,render_template,request
 import sqlite3
 import _sqlite3
 
-app = Flask(__name__,static_folder='./static')
+application = app = Flask(__name__,static_folder='./static')
 
 
 # conn = sqlite3.connect('todo.db')
